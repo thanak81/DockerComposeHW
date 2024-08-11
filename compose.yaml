@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "3001:5432"
+    environment:
+      - POSTGRES_PASSWORD=123
+    volumes:
+      - E:\Self Learning\Docker\composetest1\postgresdata:/var/lib/postgresql/data
+  spring:
+    image: thanak81/springdocker:v6
+    ports:
+      - "8000:8080"
